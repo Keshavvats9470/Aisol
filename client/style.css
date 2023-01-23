@@ -1,20 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400&display=swap');
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Alegreya Sans", sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background: #343541;
+  background: #eaeaea;
+  
 }
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: lightgray;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #FDA512;
+  /* border-radius: 20px;      */
+}
+
 
 #app {
   width: 100vw;
   height: 100vh;
-  background: #343541;
+  background: white;
 
   display: flex;
   flex-direction: column;
@@ -27,7 +44,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-
+  
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -46,18 +63,23 @@ body {
 
 .wrapper {
   width: 100%;
-  padding: 15px;
+  padding: 17px;
 }
 
 .ai {
-  background: #40414F;
+  background: #d3d3d3;
+  /* border: 1px solid #FDA512; */
 }
+
+.ai:hover {
+  background: #fda512;
+}
+
 
 .chat {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -65,12 +87,10 @@ body {
 }
 
 .profile {
-  width: 36px;
-  height: 36px;
-  border-radius: 5px;
-
-  background: #5436DA;
-
+  width: 42px;
+  height: 42px;
+  border-radius: 45px;
+  background: #0f0f70;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,58 +101,50 @@ body {
 }
 
 .profile img {
-  width: 60%;
-  height: 60%;
+  width: 65%;
+  height: 65%;
   object-fit: contain;
 }
 
 .message {
+  padding: 7px;
   flex: 1;
-
-  color: #dcdcdc;
-  font-size: 20px;
-
+  color: #000046;
+  font-size: 18px;
   max-width: 100%;
   overflow-x: scroll;
-
-  /*
-   * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
-   * specifies how white space within an element should be handled. It is similar to the "pre" value, which tells the browser to treat all white space as significant and to preserve it exactly as it appears in the source code.
-   * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
-   * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
-  */
   white-space: pre-wrap; 
-
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-/* hides scrollbar */
 .message::-webkit-scrollbar {
   display: none;
 }
 
 form {
-  width: 100%;
+  width: 65%;
   max-width: 1280px;
   margin: 0 auto;
+  margin-bottom: 8px;
   padding: 10px;
-  background: #40414F;
-
+  background: white;
+  border: 1px solid #FDA512;
+  border-radius: 25px;
   display: flex;
   flex-direction: row;
   gap: 10px;
+  position: relative;
 }
 
 textarea {
   width: 100%;
-
-  color: #fff;
-  font-size: 18px;
-
-  padding: 10px;
+  color: #ffff;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 11px;
   background: transparent;
-  border-radius: 5px;
+  border-radius: 16px;
   border: none;
   outline: none;
 }
